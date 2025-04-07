@@ -1,0 +1,18 @@
+<li>
+    <div (click)="toggle()" [class.deleted]="node.is_deleted" class="node">
+      <span *ngIf="node.children?.length">
+        <span class="arrow">
+          <span *ngIf="!node.expanded">▼</span> 
+          <span *ngIf="node.expanded">▲</span> 
+        </span>
+      </span>
+      <span class="node-text">{{ node.id }} - {{ node.title }}</span>
+    </div>
+    
+    <ul *ngIf="node.expanded && node.children?.length">
+      <ng-container *ngFor="let child of node.children">
+        <app-tree-node [node]="child" />
+      </ng-container>
+    </ul>
+  </li>
+  

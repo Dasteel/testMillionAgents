@@ -1,0 +1,48 @@
+.node {
+    cursor: pointer;
+    margin: 8px 0;
+    display: flex;
+    align-items: center;
+    padding: 6px 12px;
+    border-radius: 5px;
+    transition: background-color 0.2s ease;
+    font-size: 16px;
+    background-color: #f9f9f9;  
+  
+    &:hover {
+      background-color: #e0f7fa; 
+    }
+  
+    &.deleted {
+      text-decoration: line-through;
+      opacity: 0.6;
+      background-color: #f2dede; 
+    }
+  }
+  
+  .node .arrow {
+    font-size: 18px;
+    margin-right: 8px;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .node-text {
+    font-weight: 600;
+    color: #333;
+    transition: color 0.2s ease;
+  }
+  
+  .node:hover .node-text {
+    color: #00796b;  
+  }
+  
+  ul {
+    list-style: none;
+    padding-left: 20px;  
+    margin-top: 4px;
+  }
+  
+  ul li {
+    margin-bottom: 4px;
+  }
+  
